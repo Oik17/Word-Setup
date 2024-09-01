@@ -1,5 +1,5 @@
 param (
-    [string]$SubjectName = "DA"  # Default value if no parameter is provided
+    [string]$Subject = "DA"  # Default value if no parameter is provided
 )
 
 $Word = New-Object -ComObject word.application
@@ -14,7 +14,7 @@ $Document.PageSetup.LeftMargin = 72
 $Document.PageSetup.RightMargin = 72  
 
 $Range = $Document.Content.Paragraphs.Add().Range
-$Range.Text = $SubjectName+" DA"
+$Range.Text = $Subject+" DA"
 $Range.Style = "Heading 1"
 $Range.Font.Name = "Abadi Extra Light"
 $Range.ParagraphFormat.Alignment = [Microsoft.Office.Interop.Word.WdParagraphAlignment]::wdAlignParagraphCenter
