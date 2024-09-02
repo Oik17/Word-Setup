@@ -1,5 +1,7 @@
 param (
-    [string]$Subject = "DA"  # Default value if no parameter is provided
+    [string]$subject = "DA",
+    [string]$name ="Akshat Gupta",
+    [string]$regno="22BCE2173"
 )
 
 $Word = New-Object -ComObject word.application
@@ -14,7 +16,7 @@ $Document.PageSetup.LeftMargin = 72
 $Document.PageSetup.RightMargin = 72  
 
 $Range = $Document.Content.Paragraphs.Add().Range
-$Range.Text = $Subject+" DA"
+$Range.Text = $subject+" DA"
 $Range.Style = "Heading 1"
 $Range.Font.Name = "Abadi Extra Light"
 $Range.ParagraphFormat.Alignment = [Microsoft.Office.Interop.Word.WdParagraphAlignment]::wdAlignParagraphCenter
@@ -22,15 +24,15 @@ $Range.Font.Size = 32
 $Range.InsertParagraphAfter()
 
 $Range = $Document.Content.Paragraphs.Add().Range
-$Range.Text = "Akshat Gupta"
+$Range.Text = $name
 $Range.Style = "Normal"
 $Range.Font.Name = "Abadi Extra Light"
 $Range.ParagraphFormat.Alignment = [Microsoft.Office.Interop.Word.WdParagraphAlignment]::wdAlignParagraphRight
-$Range.Font.Size = 28
+$Range.Font.Size = 26
 $Range.InsertParagraphAfter()
 
 $Range = $Document.Content.Paragraphs.Add().Range
-$Range.Text = "22BCE2173"
+$Range.Text = $regno
 $Range.Style = "Normal"
 $Range.Font.Name = "Abadi Extra Light"
 $Range.ParagraphFormat.Alignment = [Microsoft.Office.Interop.Word.WdParagraphAlignment]::wdAlignParagraphRight
