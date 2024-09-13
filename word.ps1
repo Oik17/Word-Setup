@@ -36,7 +36,7 @@ $Range.Text = $regno
 $Range.Style = "Normal"
 $Range.Font.Name = "Abadi Extra Light"
 $Range.ParagraphFormat.Alignment = [Microsoft.Office.Interop.Word.WdParagraphAlignment]::wdAlignParagraphRight
-$Range.Font.Size = 28
+$Range.Font.Size = 26
 $Range.InsertParagraphAfter()
 
 $Range = $Document.Content.Paragraphs.Add().Range
