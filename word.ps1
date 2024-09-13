@@ -1,5 +1,5 @@
 param (
-    [string]$subject = "DA",
+    [string]$subject = "",
     [string]$name ="Akshat Gupta",
     [string]$regno="22BCE2173"
 )
